@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -18,7 +19,7 @@ public class Player : MonoBehaviour
         source = GetComponent<AudioSource>();
     }
 
-    private void Update()
+    async void Update()
     {
         var newinput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if( newinput != Vector2.zero && rb.velocity.magnitude < 0.1f)
