@@ -33,8 +33,8 @@ public class Player : MonoBehaviour
 
         if (rb.velocity.magnitude < 0.1f && !hasLanded && newinput != input)
         {
-            Instantiate(landingParticles, transform.position, Quaternion.identity);
             source.PlayOneShot(land);
+            Instantiate(landingParticles, transform.position, Quaternion.identity);
             hasLanded = true;
         }
 
